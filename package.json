@@ -8,7 +8,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src/",
     "build": "rollup -c ./.rollup.config.js",
-    "prepublishOnly": "npm run lint && npm run build && git add dist && git commit -m \"[chore] Create builds\""
+    "prepublishOnly": "npm run lint && npm run build"
   },
   "engines": {
     "node": ">=16"
