@@ -5,7 +5,12 @@ export class Debuggable {
     }
 
     get debug() {
-        if (this.globalJsDebug || this?.options?.debug === true) {
+        if (
+            this.globalJsDebug ||
+            this?.options?.debug === true ||
+            window.ghDebuggableDebugEnabled === true ||
+            window.ghDebuggableDebugEnabled === this.prefix
+        ) {
             if (this.prefix) {
                 return {
                     log: this._wrappedLog.bind(this),

@@ -93,6 +93,17 @@ Debuggable.setGlobalDebug(true);
 otherSilent.logSomething() // "[OtherClass]: Test"
 ```
 
+From v1.1.0 on you can also enable debug output at runtime (e.g. through the 
+browser console):
+
+```js
+// Enable debug output for all modules
+window.ghDebuggableDebugEnabled = true;
+// Target one specific module
+window.ghDebuggableDebugEnabled = 'OtherClass';
+```
+
+
 ### Key Codes
 
 A simple map of key codes to keys:
