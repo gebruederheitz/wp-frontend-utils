@@ -1,4 +1,13 @@
 export class Debuggable {
+    /**
+     * Toggle global JS debug output on or off.
+     *
+     * @param {boolean} toggle
+     */
+    static setGlobalDebug(toggle) {
+        Debuggable.prototype.globalJsDebug = toggle;
+    }
+
     constructor(prefix = '') {
         this.prefix = prefix;
         this.globalJsDebug = Debuggable.prototype.globalJsDebug;
@@ -39,15 +48,6 @@ export class Debuggable {
 
     _wrappedError(...args) {
         console.error(`[${this.prefix}]`, ...args);
-    }
-
-    /**
-     * Toggle global JS debug output on or off.
-     *
-     * @param {boolean} toggle
-     */
-    setGlobalDebug(toggle) {
-        Debuggable.prototype.globalJsDebug = toggle;
     }
 }
 
