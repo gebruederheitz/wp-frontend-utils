@@ -1,6 +1,6 @@
 {
   "name": "@gebruederheitz/wp-frontend-utils",
-  "version": "1.1.1-beta.1",
+  "version": "1.1.1",
   "description": "Some JS helpers for easier Wordpress frontend development.",
   "main": "dist/index.js",
   "module": "dist/index.js",
